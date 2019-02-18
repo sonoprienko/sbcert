@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Header //-->
+<html>
+
+<head>
+    <title>Admin | SBCert-POP Application</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+<!-- Content //-->
+<div id="content">
+    <h1>Admin</h1>
+
+    <?php print $form; ?>
+
+    <?php if ($token): ?>
+        <p>Now you can use the link to access to Registration page:
+            <a href="/register/?token=<?php print $token; ?>">/register/?token=<?php print $token; ?></a>
+        </p>
+    <?php endif; ?>
+
+</div>
+</body>
+
+</html>

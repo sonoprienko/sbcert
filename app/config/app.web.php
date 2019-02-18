@@ -1,27 +1,31 @@
 <?php
 return [
-  'routes'   => [
-    '/' => [
-      'controller' => 'SBCert\Controller\IndexController',
-      'action'     => 'index'
+    'routes' => [
+        '/' => [
+            'controller' => 'SBCert\Controller\IndexController',
+            'action' => 'index',
+        ],
+        '/admin' => [
+            'controller' => 'SBCert\Controller\AdminController',
+            'action' => 'admin',
+        ],
+        '*' => [
+            'controller' => 'SBCert\Controller\IndexController',
+            'action' => 'error',
+        ],
     ],
-    '*' => [
-      'controller' => 'SBCert\Controller\IndexController',
-      'action'     => 'error'
-    ]
-  ],
-  'services' => [
-    'database' => [
-      'call'   => 'Pop\Db\Db::connect',
-      'params' => [
-        'adapter' => 'MySQL',
-        'options' => [
-          'database' => 'sbcert_db',
-          'username' => 'sbcert_user',
-          'password' => 'yw7ol!mn@4',
-          'host'     => 'localhost'
-        ]
-      ]
-    ]
-  ]
+    'services' => [
+        'database' => [
+            'call' => 'Pop\Db\Db::connect',
+            'params' => [
+                'adapter' => 'MySQL',
+                'options' => [
+                    'database' => 'sbcert_db',
+                    'username' => 'sbcert_user',
+                    'password' => 'yw7ol!mn@4',
+                    'host' => 'localhost',
+                ],
+            ],
+        ],
+    ],
 ];
