@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d43a08d27b2343e211cb2fbee3b8dc8",
+    "content-hash": "1272de7ba73088cc7aee76158ee0e6f8",
     "packages": [
         {
             "name": "popphp/pop-db",
@@ -293,6 +293,60 @@
                 "validator"
             ],
             "time": "2018-01-29T22:26:37+00:00"
+        },
+        {
+            "name": "popphp/pop-view",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/popphp/pop-view.git",
+                "reference": "d212b981cb1e5a59334301f5f2d74b8b35f8b858"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/popphp/pop-view/zipball/d212b981cb1e5a59334301f5f2d74b8b35f8b858",
+                "reference": "d212b981cb1e5a59334301f5f2d74b8b35f8b858",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.5.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pop\\View\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nick Sagona",
+                    "email": "dev@nolainteractive.com",
+                    "homepage": "http://www.nolainteractive.com/"
+                }
+            ],
+            "description": "Pop View Component for Pop PHP Framework",
+            "homepage": "http://www.popphp.org/",
+            "keywords": [
+                "php",
+                "pop",
+                "pop php",
+                "template",
+                "view",
+                "view template"
+            ],
+            "time": "2018-01-29T22:29:23+00:00"
         },
         {
             "name": "popphp/popphp",
