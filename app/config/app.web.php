@@ -9,6 +9,10 @@ return [
             'controller' => 'SBCert\Controller\AdminController',
             'action' => 'admin',
         ],
+        '/register/' => [
+            'controller' => 'SBCert\Controller\RegisterController',
+            'action' => 'register',
+        ],
         '*' => [
             'controller' => 'SBCert\Controller\IndexController',
             'action' => 'error',

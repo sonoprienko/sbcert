@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Header //-->
+<html>
+
+<head>
+    <title>Registration | SBCert-POP Application</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+<!-- Content //-->
+<div id="content">
+    <h1>Registration</h1>
+
+    <?php if ($restricted): ?>
+        <p><strong>Access denied</strong></p>
+    <?php else: ?>
+        <?php print $form; ?>
+    <?php endif; ?>
+
+
+</div>
+</body>
+
+</html>

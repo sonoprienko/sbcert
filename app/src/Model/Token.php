@@ -11,8 +11,15 @@ class Token
 
     protected $token;
 
-    public function __construct($email = '') {
+    public function __construct($email = '')
+    {
         $this->token = $this->createToken($email);
+    }
+
+    public static function getUserId($token_id)
+    {
+        $token = Table\Token::findOne(['token' => $token_id]);
+        return isset($token->user_id) ? $token->user_id : 0;
     }
 
     public function getById($id)
@@ -48,7 +55,7 @@ class Token
     private function createToken($email)
     {
         $timestamp = date('U');
-        $key = Token::SECURITY_TOKEN_PREFIX . '_' .$timestamp.  '_' . $email;
+        $key = Token::SECURITY_TOKEN_PREFIX . '_' . $timestamp . '_' . $email;
         $token = sha1($key);
         return $token;
     }

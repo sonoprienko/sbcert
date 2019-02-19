@@ -18,7 +18,7 @@ class User
         return Table\User::findById($id);
     }
 
-    public function save($form, $id = 0)
+    public function save($form, $id = 0, $token = '')
     {
         if ($id) {
             $user = $this->getById($id);
@@ -32,7 +32,11 @@ class User
             $user->pass = (!empty($form['pass'])
                 ? $this->createPassword($user->email) : $user->pass);
             $user->type = (!empty($form['type']) ? $form['type'] : $user->type);
-            $user->status = USER::STATUS_CONFIRMED;
+            $user->status = (!empty($form['status']) ? $form['status'] : $user->status);
+
+            if ($token && $user->type == 3) {
+                $user->status = USER::STATUS_CONFIRMED;
+            }
         }
         else {
             $fields = [
